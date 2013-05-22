@@ -4,15 +4,13 @@
   <title>Rating Directive Demo</title>
   <link rel="stylesheet" href="rating.css"/>
 </head>
-<body ng-init="rating = 5">
+<body ng-controller="FundooCtrl">
   Rating is {{rating}} <br/>
   Clickable Rating <br/>
-  <div fundoo-rating rating-value="rating" max="10"></div>
+  <div fundoo-rating rating-value="rating" max="10" on-rating-selected="saveRatingToServer(rating)"></div>
   <br/>
   Readonly rating <br/>
   <div fundoo-rating rating-value="rating" max="10" readonly="true"></div>
-
-  <button ng-click="rating = 7">Change rating to 7</button>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
   <script type="text/javascript" src="rating.js"></script>
