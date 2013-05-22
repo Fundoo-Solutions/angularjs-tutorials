@@ -9,7 +9,8 @@ angular.module('FundooDirectiveTutorial', [])
                 '</ul>',
       scope: {
         ratingValue: '=',
-        max: '='
+        max: '=',
+        readonly: '@'
       },
       link: function (scope, elem, attrs) {
 
@@ -21,6 +22,9 @@ angular.module('FundooDirectiveTutorial', [])
         };
 
         scope.toggle = function(index) {
+          if (scope.readonly && scope.readonly === 'true') {
+            return;
+          }
           scope.ratingValue = index + 1;
         };
 
