@@ -4,8 +4,9 @@
   <title>Rating Directive Demo</title>
   <link rel="stylesheet" href="rating.css"/>
 </head>
-<body>
-  <div fundoo-rating></div>
+<body ng-init="rating = 5">
+  Rating is {{rating}} <br/>
+  <div fundoo-rating rating-value="rating"></div>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
   <script type="text/javascript" src="rating.js"></script>
