@@ -14,8 +14,10 @@ ul.rating {
   padding: 1px;
   text-align: center;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .rating .filled {
   color: #21568b;
 }
+
