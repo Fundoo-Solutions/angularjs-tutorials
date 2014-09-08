@@ -37,7 +37,7 @@ angular.module('FundooDirectiveTutorial', [])
         };
 
         scope.$watch('ratingValue', function(newVal, oldVal) {
-          if (newVal) {
+          if (newVal || newVal === 0) {
             updateStars();
           }
         });
