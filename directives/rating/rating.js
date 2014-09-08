@@ -36,7 +36,7 @@ angular.module('FundooDirectiveTutorial', [])
           scope.onRatingSelected({rating: index + 1});
         };
 
-        scope.$watch('ratingValue', function(oldVal, newVal) {
+        scope.$watch('ratingValue', function(newVal, oldVal) {
           if (newVal) {
             updateStars();
           }
